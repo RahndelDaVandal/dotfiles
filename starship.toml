@@ -28,14 +28,12 @@ symbol = " "
 # symbol = "🐍 "
 # python_binary = "./.venv/bin/python"
 python_binary = ["./.venv/bin/python", "python3.10", "python3", "python"]
-detect_extensions = ""
 
 [git_branch]
 symbol = " "
 # symbol = "🌱 "
 style = "green"
 truncation_length = 4
-truncation_symbol = "..."
 
 [git_status]
 format = "$conflicted$stashed$deleted$renamed$modified$staged$untracked "
