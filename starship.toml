@@ -1,0 +1,60 @@
+# ~/.config/starship.toml
+# Connor.Sahleen@gmail.com
+
+scan_timeout = 10
+add_newline = true
+format = "$all"
+right_format = """$cmd_duration$python"""
+
+[character]
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
+# success_symbol = "[➜](bold green) "
+# error_symbol = "[➜](bold red) "
+
+[directory]
+style = "blue"
+truncation_length = 2
+truncation_symbol = ""
+
+[cmd_duration]
+format = "[祥$duration](yellow) "
+show_milliseconds = false
+
+[python]
+format = '[$symbol$version \($virtualenv\)](blue) '
+symbol = " "
+# symbol = " "
+# symbol = "🐍 "
+# python_binary = "./.venv/bin/python"
+python_binary = ["./.venv/bin/python", "python3.10", "python3", "python"]
+detect_extensions = ""
+
+[git_branch]
+symbol = " "
+# symbol = "🌱 "
+style = "green"
+truncation_length = 4
+truncation_symbol = "..."
+
+[git_status]
+format = "$conflicted$stashed$deleted$renamed$modified$staged$untracked "
+up_to_date = "[✓](green)"
+ahead = "[⇡${count}](green)"
+diverged = "[⇕⇡${ahead_count}⇣${behind_count}](orange)"
+behind = "[⇣${count}](orange) "
+staged = "[++$count](green) "
+untracked = "[?$count](blue)"
+modified = "[!$count](yellow) "
+
+[hostname]
+disabled = true
+
+[username]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[package]
+disabled = true
