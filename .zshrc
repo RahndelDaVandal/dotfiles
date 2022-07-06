@@ -114,10 +114,15 @@ source $ZSH/oh-my-zsh.sh
 
 alias cat="bat"
 alias vim="nvim"
-alias ls="exa -lFmh --group-directories-first"
-alias la="exa -alFmh --group-directories-first"
+#alias ls="exa -lFmh --group-directories-first"
+#alias la="exa -alFmh --group-directories-first"
+alias ls="exa -alFmh --group-directories-first"
 
-# Python venv alias
+# zoxide aliases
+alias cd='z'
+alias zz='z -'
+
+# Python Aliases 
 venv_alias(){
   if [[ $VIRTUAL_ENV ]]; then
       deactivate
@@ -126,6 +131,10 @@ venv_alias(){
   fi
 }
 alias venv=venv_alias
+alias pytest='py -m pytest'
+alias watch='find *.py | entr -r python3'
+
+#Docker Aliases
 alias kali="docker restart kali && docker attach kali"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -134,3 +143,15 @@ alias kali="docker restart kali && docker attach kali"
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.poetry/bin:$PATH"
+
+eval "$(zoxide init zsh)"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
