@@ -5,6 +5,7 @@ scan_timeout = 10
 add_newline = true
 format = "$all"
 # right_format = """$cmd_duration$python"""
+right_format = """$cmd_duration"""
 
 [character]
 success_symbol = "[](bold green)"
@@ -43,7 +44,7 @@ untracked = "[?$count](blue)"
 modified = "[!$count](yellow) "
 
 [python]
-# format = '[$symbol$version \($virtualenv\)](blue) '
+format = '[$symbol$version \($virtualenv\)](blue) '
 symbol = " "
 # symbol = " "
 # symbol = "🐍 "
@@ -52,6 +53,7 @@ python_binary = ["./.venv/bin/python", "python3.10", "python3", "python"]
 
 [golang]
 symbol = " "
+format = "[via $symbol$version](blue) "
 
 [nodejs]
 disabled = true
