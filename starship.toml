@@ -1,17 +1,17 @@
 # ~/.config/starship.toml
 # Connor.Sahleen@gmail.com
 
-scan_timeout = 10
 add_newline = true
 format = "$all"
-# right_format = """$cmd_duration$python"""
 right_format = """$cmd_duration"""
+scan_timeout = 13
+command_timeout = 550
 
 [character]
 success_symbol = "[](bold green)"
 error_symbol = "[](bold red)"
-# success_symbol = "[➜](bold green) "
-# error_symbol = "[➜](bold red) "
+# success_symbol = "[➜](bold green)"
+# error_symbol = "[➜](bold red)"
 
 [hostname]
 disabled = true
@@ -58,5 +58,5 @@ format = "[via $symbol$version](blue) "
 [nodejs]
 disabled = true
 
-[package]
-disabled = true
+# [package]
+# disabled = true

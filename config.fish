@@ -12,6 +12,7 @@ fish_add_path -a ~/.cargo/bin
 zoxide init fish | source
 
 # my aliases
+alias t="~/tmux-alias.sh"
 
 alias cp="cp -i"
 alias rm="rm -i"
@@ -21,13 +22,16 @@ alias py="python3.10"
 alias cat="bat"
 alias vim="nvim"
 alias ls="exa -alFmh --group-directories-first"
-alias find="fd"
-alias grep="rg"
+# alias find="fd"
+# alias grep="rg"
 alias du="dust"
 # alias time="hyperfine"
 alias ps="procs"
 alias sed="sd"
 alias top="btm"
 alias htop="btm"
+
+alias led-on="echo \"1\" > /proc/net/rtl88XXau/wlan1/led_ctrl"
+alias led-off="echo \"0\" > /proc/net/rtl88XXau/wlan1/led_ctrl"
 
 starship init fish | source
