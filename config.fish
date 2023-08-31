@@ -14,7 +14,7 @@ alias py="python3"
 alias cat="bat"
 alias vim="nvim"
 alias ls="exa -alFmh --group-directories-first"
-# alias t="if tmux ls &>/dev/null; then tmux attach; else tmux; end"
+alias ps="powershell.exe -Command"
 
 function t
   if tmux ls &>/dev/null;
