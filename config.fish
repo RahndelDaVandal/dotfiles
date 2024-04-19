@@ -8,7 +8,8 @@ fish_add_path -a /home/$USER/miniconda3/bin
 fish_add_path -a /usr/local/go/bin
 
 set -g BROWSER /usr/bin/browser_in_win
-set -g nvm_default_version '18.15.0'
+set -g NVM_DIR $HOME/.nvm
+# set -g nvm_default_version '18.15.0'
 
 # my aliases
 alias py="python3"
