@@ -23,7 +23,8 @@ function deploy
     end
 
     # Install ipk(s) on $target
-    ssh admin@$target 'opkg update && opkg install /home/admin/.tmp_deploy/*.ipk && reboot || exit 1'
+    # ssh admin@$target 'opkg update && opkg install /home/admin/.tmp_deploy/*.ipk && reboot || exit 1'
+    ssh admin@$target 'opkg install /home/admin/.tmp_deploy/*.ipk && reboot || exit 1'
 
     if test $status -ne 0
         echo "Error installing ipk(s) on target, aborting deploy...."
