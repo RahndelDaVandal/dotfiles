@@ -24,6 +24,7 @@ alias list-usb='powershell.exe -Command "usbipd list"'
 alias attach-usb='powershell.exe -Command "usbipd attach --wsl --busid"'
 alias detach-usb='powershell.exe -Command "usbipd detach --busid"'
 
+# Windows terminal command `wsl -e fish -l`
 if status is-interactive
     if not set -q TMUX
         tmux new-session -A -s main
