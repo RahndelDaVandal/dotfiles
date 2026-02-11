@@ -7,6 +7,7 @@ fish_add_path -a ~/.cargo/bin
 fish_add_path -a /home/$USER/miniconda3/bin
 fish_add_path -a /usr/local/go/bin
 fish_add_path -a $HOME/go/bin
+fish_add_path -a ~/.npm-global/bin
 
 set -g BROWSER /usr/bin/browser_in_win
 set -g NVM_DIR $HOME/.nvm
@@ -23,13 +24,19 @@ alias list-usb='powershell.exe -Command "usbipd list"'
 alias attach-usb='powershell.exe -Command "usbipd attach --wsl --busid"'
 alias detach-usb='powershell.exe -Command "usbipd detach --busid"'
 
-function t
-    if tmux ls &>/dev/null
-        tmux attach
-    else
-        tmux
+if status is-interactive
+    if not set -q TMUX
+        tmux new-session -A -s main
     end
 end
+
+# function t
+#     if tmux ls &>/dev/null
+#         tmux attach
+#     else
+#         tmux
+#     end
+# end
 
 starship init fish | source
 zoxide init fish | source
