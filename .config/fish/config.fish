@@ -8,9 +8,11 @@ fish_add_path -a /home/$USER/miniconda3/bin
 fish_add_path -a /usr/local/go/bin
 fish_add_path -a $HOME/go/bin
 fish_add_path -a ~/.npm-global/bin
+fish_add_path -a /usr/local/oecore-x86_64/sysroots/x86_64-nilrtsdk-linux/usr/bin
 
 set -g BROWSER /usr/bin/browser_in_win
 set -g NVM_DIR $HOME/.nvm
+set --universal nvm_default_version 20
 # set -g nvm_default_version '18.15.0'
 
 # my aliases

@@ -117,3 +117,10 @@ if ! shopt -oq posix; then
 fi
 . "$HOME/.cargo/env"
 export PATH=~/.npm-global/bin:$PATH
+
+# fnm
+FNM_PATH="/home/connor/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --shell bash)"
+fi
