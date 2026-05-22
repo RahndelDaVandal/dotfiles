@@ -19,7 +19,7 @@ set --universal nvm_default_version 20
 alias py="python3"
 alias cat="bat"
 alias vim="nvim"
-alias ls="exa -alFmh --group-directories-first"
+alias ls="eza --long --all --header --group-directories-first --classify"
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias pwrs="powershell.exe -Command"
 alias list-usb='powershell.exe -Command "usbipd list"'
