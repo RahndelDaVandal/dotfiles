@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/usr/bin/python3.10 -c ' *)",
+      "Bash(/usr/bin/python3.10 tools/fetch_standard_cards.py)",
+      "Bash(/usr/bin/python3.10 tools/build_budget_legal.py)",
+      "Bash(/usr/bin/python3.10 -)"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "sh ~/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true
+  },
+  "voice": {
+    "enabled": false,
+    "mode": "hold"
+  },
+  "theme": "dark",
+  "voiceEnabled": false,
+  "agentPushNotifEnabled": true
+}
